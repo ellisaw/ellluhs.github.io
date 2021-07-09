@@ -1,1 +1,352 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lato&family=PT+Sans&family=Public+Sans:wght@700&display=swap" rel="stylesheet">
 
+<!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+<style>
+  /* Reset CSS Defaults */
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, font, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, caption {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent;
+}
+
+/* Variables */
+:root {
+  --green: #00563f;
+  --blue: #ADCFDD;
+  --navy: #002C47;
+  --gold: #f6ae2d;
+  --white: #fff4de;
+  --transparent-gold: #f6ae2d50;
+  --block-border: 0px;
+}
+
+/* Global Attributes */
+body {
+  font-family: 'Lato', sans-serif;
+  background-color: var(--white);
+  color: var(--navy);
+}
+h1 {
+  font-size: 4.5vw;
+  letter-spacing: 0.02em;
+}
+h2 {
+  font-size: 3vw;
+  font-weight: bold;
+  letter-spacing: 0.03em;
+}
+h3 {
+  font-size: 2vw;
+  font-weight: bold;
+  margin-bottom: 25px;
+  letter-spacing: 0.02em;
+}
+h4 {
+  font-size: 1.5vw;
+  margin-bottom: 10px;
+}
+.row {
+  margin: auto;
+  padding: 0px;
+}
+
+/* Header */
+.header {
+  background-color: var(--green);
+  padding-top: 25px;
+  text-align: left;
+}
+
+.header h2 {
+  font-family: 'Public Sans', sans-serif;
+  color: var(--gold);
+  margin: 50px;
+  margin-bottom: 25px;
+  margin-top: 25px;
+  text-align: left;
+  /*text-shadow: 1px 1px 4px var(--navy);*/
+}
+
+.header a:hover {
+  text-decoration: none;
+}
+
+/* Nav Bar */
+.navbar {
+  background-color: var(--navy);
+  padding: 0px;
+  padding-left: 60px;
+  padding-right: 60px;
+  border-bottom: 5px solid var(--navy);
+}
+.navbar ul {
+}
+.nav-link {
+  color: var(--blue);
+}
+.nav-link:hover {
+  color: var(--white);
+}
+.dropdown:hover>.dropdown-menu {
+  display: block;
+}
+.dropdown:hover>.nav-link {
+  color: var(--white);
+}
+.nav-item {
+  padding: 10px;
+}
+#active {
+  background-color: var(--green);
+}
+#active a {
+  color: var(--gold);
+}
+#active .dropdown-item {
+  color: var(--white);
+}
+#active .dropdown-item:hover {
+  color: var(--navy);
+}
+/* Dropdown */
+.dropdown-menu{
+  background-color: var(--navy);
+  border-radius: 0;
+  border: none;
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, .1);
+}
+.dropdown-menu a{
+  color: var(--white);
+  padding: 10px;
+  padding-left: 20px;
+}
+.dropdown-menu a:hover {
+  background-color: var(--white);
+  color: var(--navy);
+}
+
+/* Page Content */
+#info {
+  padding: 60px;
+  padding-top: 50px;
+  background-color: var(--white);
+}
+#info h2 {
+  margin-bottom: 30px;
+}
+#info p {
+  margin-bottom: 25px;
+}
+#advisory-board {
+  margin-bottom:50px;
+}
+#advisory-board th {
+  border-bottom: 2px solid var(--green);
+  border-top: none;
+}
+#advisory-board td {
+  padding: 5px;
+}
+#advisory-board th, #advisory-board td {
+  color: var(--navy);
+}
+#info a {
+  color: var(--navy);
+  font-weight: bold;
+}
+#pic {
+  background-image: url("https://i.imgur.com/GYocJxo.png");
+  background-size: cover;
+  background-position: center;
+  border-left: 5px solid var(--navy);
+}
+
+/* Footer */
+.footer {
+  background-color: var(--navy);
+  color: var(--blue);
+  padding: 50px;
+}
+.footer ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.footer h4 {
+  margin-bottom: 25px;
+}
+.footer p {
+  color: var(--white);
+  margin-bottom: 10px;
+}
+
+.footer a:hover {
+  color: var(--white);
+}
+</style>
+</head>
+<body>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script><div class="header">
+  <div class="row" id="title">
+    <div class="col-sm-12">
+      <a href="https://codepen.io/ellisasadi-wright/pen/RwVNMrG"><h2>Lindenwold Public Library</h2></a>
+    </div>
+  </div>
+
+  <!-- Navigation Bar -->
+  <nav class="navbar navbar-expand-lg">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <!-- Home Tab -->
+        <li class="nav-item" id="active">
+          <a class="nav-link" href="https://htmlpreview.github.io/?https://github.com/elluhs/ellluhs.github.io/blob/main/index.html">Home <span class="sr-only">(current)</span></a>
+        </li>
+        <!-- The Library Tab -->
+        <li class="nav-item dropdown">
+          <a class="nav-link" href="https://htmlpreview.github.io/?https://github.com/elluhs/ellluhs.github.io/blob/main/about.html" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            The Library
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item" href="https://htmlpreview.github.io/?https://github.com/elluhs/ellluhs.github.io/blob/main/about.html">About</a>
+            <a class="dropdown-item" href="https://lindenwold.follettdestiny.com/common/welcome.jsp?context=saas26_2902910">Catalog</a>
+            <a class="dropdown-item" href="https://htmlpreview.github.io/?https://github.com/elluhs/ellluhs.github.io/blob/main/about.html#membership">Membership</a>
+          </div>
+        </li>
+        <!-- Events Tab -->
+        <li class="nav-item">
+          <a class="nav-link" href="https://htmlpreview.github.io/?https://github.com/elluhs/ellluhs.github.io/blob/main/index.html#events">Events <span class="sr-only">(current)</span></a>
+        </li>
+        <!-- Community Tab -->
+        <li class="nav-item dropdown">
+          <a class="nav-link" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Community
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item" href="https://htmlpreview.github.io/?https://github.com/elluhs/ellluhs.github.io/blob/main/community.html#adv-board">Library Advisory Board</a>
+            <a class="dropdown-item" href="https://htmlpreview.github.io/?https://github.com/elluhs/ellluhs.github.io/blob/main/about.html#lib-friends">Friends of the Library</a>
+            <a class="dropdown-item" href="#">Community Links</a>
+          </div>
+        </li>
+        <!-- Kids Corner Tab -->
+        <li class="nav-item">
+          <a class="nav-link" href="https://htmlpreview.github.io/?https://github.com/elluhs/ellluhs.github.io/blob/main/kids.html">Kids Corner<span class="sr-only">(current)</span></a>
+        </li>
+      </ul>
+
+      <ul class="navbar-nav">
+        <!-- Contact Tab -->
+        <li class="nav-item">
+          <a class="nav-link" href="https://htmlpreview.github.io/?https://github.com/elluhs/ellluhs.github.io/blob/main/contact.html">Contact Us</a>
+        </li>
+        <!-- Select Language -->
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Select Language
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item" href="#">English</a>
+            <a class="dropdown-item" href="#">Spanish</a>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </nav>
+</div>
+
+<!-- Page Content -->
+<div class="row">
+  <div class="col-sm-7" id="info">
+    <h2>Library Community</h2>
+    <h3 id="adv-board">Advisory Board</h3>
+    <p>The Library Advisory Board Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Nec nam aliquam sem et tortor. Libero enim sed faucibus turpis in eu. Pulvinar pellentesque habitant morbi tristique senectus et netus. </p>
+    <table class="table" id="advisory-board">
+      <thead>
+        <tr>
+          <th>First</th>
+          <th>Last</th>
+          <th>Position</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Andrew</td>
+          <td>Rodgers</td>
+          <td>President</td>
+        </tr>
+        <tr>
+          <td>Barbara</td>
+          <td>Borger</td>
+          <td>Vice President</td>
+        </tr>
+        <tr>
+          <td>Stanley</td>
+          <td>Kruczynski</td>
+          <td>Treasurer</td>
+        </tr>
+        <tr>
+          <td>Chris</td>
+          <td>Rasmussen</td>
+          <td>Secretary</td>
+        </tr>
+        <tr>
+          <td>Dawn</td>
+          <td>Dreher</td>
+          <td>Member</td>
+        </tr>
+        <tr>
+          <td>Phyllis</td>
+          <td>Burlap</td>
+          <td>Member</td>
+        </tr>
+      </tbody>
+    </table>
+    <h3 id="lib-friends">Friends of the Library</h3>
+    <p>Meeting for the "Friends of the Lindenwold Library" are held on the 3rd Thursday of each month at 7:00 pm at the Lindenwold Library, 310 E. Linden Avenue Lindenwold, NJ. Email the friends at <a href="#">lindenwold.library.friends@gmail.com</a>!</p>
+  </div>
+  <div class="col"></div>
+  <div class="col-sm-3" id="pic"></div>
+</div>
+
+<!-- Footer -->
+<div class="footer">
+  <div class="col-sm-3">
+    <h4 style="text-align: left">Contact Us</h4>
+    <ul>
+      <li>Email</li>
+      <li><a href="#"><p>library@lindenwold.net</p></a></li>
+      <li>Phone</li>
+      <li><p>(856) 784-5602</p></li>
+      <li>Address</li>
+      <li><p>310 E. Linden Avenue<br>Lindenwold, NJ 08021</p></li>
+    </ul>
+  </div>
+  <div class="col-sm-3">
+
+  </div>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+</body>
+</html>
